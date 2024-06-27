@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&family=Poor+Story&display=swap" rel="stylesheet">
@@ -64,26 +64,23 @@
                 <h1 class="lM-20 lH-2rem">현재 당신의 자산은</h1>
                 <div id="totalValue"></div>
             </section>
-            <div class="chart">
-                <div class="canvas-container">
+            <div class="charts-container">
+                <div class="chart">
                     <h2>지출 비중</h2>
                     <canvas id="pieChart"></canvas>
+                    <input type="range" id="monthSlider" min="1" max="24" value="1" oninput="updatePieSliderValue(this.value)">
+                    <label for="monthSlider">지난 <span id="pieSliderValue">1</span>개월</label>
                 </div>
-                <input type="range" id="monthSlider" min="1" max="24" value="1" oninput="updatePieSliderValue(this.value)">
-                <label for="monthSlider">지난 <span id="pieSliderValue">1</span>개월</label>
-            </div>
-            <div class="chart">
-                <div class="canvas-container">
+                <div class="chart">
+                    <h2>지출 내역</h2>
                     <canvas id="barChart"></canvas>
                     <div id="categoryCheckboxes"></div>
+                    <input type="range" id="weekSlider" min="1" max="36" value="1" oninput="updateBarSliderValue(this.value)">
+                    <label for="weekSlider">지난 <span id="barSliderValue">1</span></label>
                 </div>
-                <input type="range" id="weekSlider" min="1" max="36" value="1" oninput="updateBarSliderValue(this.value)">
-                <label for="weekSlider">지난 <span id="barSliderValue">1</span></label>
             </div>
-
         </main>
         <footer>made by dhy</footer>
-        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
