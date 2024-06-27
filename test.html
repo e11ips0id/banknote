@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart Visualization</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Chart Visualization</h1>
+    <form id="incomeForm">
+        <h2>Add Income</h2>
+        <label for="incomeName">Income Name:</label>
+        <input type="text" id="incomeName" name="incomeName" required>
+        <label for="incomeValue">Income Value:</label>
+        <input type="number" id="incomeValue" name="incomeValue" required>
+        <label for="incomeCategory">Category:</label>
+        <input type="text" id="incomeCategory" name="incomeCategory" required>
+        <label for="incomeLabel">Date:</label>
+        <input type="date" id="incomeLabel" name="incomeLabel">
+        <button type="submit">Add Income</button>
+    </form>
+    <form id="outcomeForm">
+        <h2>Add Outcome</h2>
+        <label for="outcomeName">Outcome Name:</label>
+        <input type="text" id="outcomeName" name="outcomeName" required>
+        <label for="outcomeValue">Outcome Value:</label>
+        <input type="number" id="outcomeValue" name="outcomeValue" required>
+        <label for="outcomeCategory">Category:</label>
+        <input type="text" id="outcomeCategory" name="outcomeCategory" required>
+        <label for="outcomeLabel">Date:</label>
+        <input type="date" id="outcomeLabel" name="outcomeLabel">
+        <button type="submit">Add Outcome</button>
+    </form>
+    <canvas id="pieChart"></canvas>
+    <canvas id="barChart"></canvas>
+    <div id="categoryCheckboxes"></div>
+    <div id="totalValue"></div>
+
+    <h2>All Transactions</h2>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date 
+                    <button onclick="sortTable('all', 'asc')">Sort Asc</button>
+                    <button onclick="sortTable('all', 'desc')">Sort Desc</button>
+                </th>
+                <th>Value</th>
+                <th>Category</th>
+                <th>Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>Income</h2>
+    <table id="incomeTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date 
+                    <button onclick="sortTable('income', 'asc')">Sort Asc</button>
+                    <button onclick="sortTable('income', 'desc')">Sort Desc</button>
+                </th>
+                <th>Value</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <h2>Outcome</h2>
+    <table id="outcomeTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date 
+                    <button onclick="sortTable('outcome', 'asc')">Sort Asc</button>
+                    <button onclick="sortTable('outcome', 'desc')">Sort Desc</button>
+                </th>
+                <th>Value</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

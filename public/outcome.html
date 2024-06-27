@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Poor+Story&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나만의 가계부</title>
+</head>
+<body>
+    <div class="layout">
+        <header>나만의 가계부</header>
+        <nav class="sidebar">
+            <div class="sidebar-top-wrapper">
+                <div class="sidebar-top">
+                    <a href="#" class="logo__wrapper">
+                        <img src="assets/book.svg" alt="Logo" class="logo-small">
+                        <span class="hide"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="sidebar-links">
+                <h2>Main</h2>
+                <ul>
+                    <li>
+                        <a href="/" title="home" class="tooltip">
+                            <span class="link hide">메인화면</span>
+                            <span class="tooltip__content">main</span>
+                        </a>
+                        <a href="/income" title="income" class="tooltip">
+                            <span class="link hide">입금내역</span>
+                            <span class="tooltip__content">income</span>
+                        </a>
+                        <a href="/outcome" title="outcome" class="tooltip">
+                            <span class="link hide">지출내역</span>
+                            <span class="tooltip__content">outcome</span>
+                        </a>
+                        <a href="/data-entry" title="data-entry" class="tooltip">
+                            <span class="link hide">내역정리</span>
+                            <span class="tooltip__content">data-entry</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-links bottom-links">
+                <h2>Settings</h2>
+                <ul>
+                    <li>
+                        <a href="#settings" title="Settings" class="tooltip">
+                            <span class="link hide">Settings</span>
+                            <span class="tooltip__content">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <h1>지출 내역</h1>
+            <table id="outcomeTable">
+                <thead>
+                    <tr>
+                        <th>이름</th>
+                        <th>날짜</th>
+                        <th>금액</th>
+                        <th>카테고리</th>
+                        <th>타입</th>
+                        <th>액션</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <div id="outcomePagination"></div>
+        </main>
+        <footer>made by dhy</footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
